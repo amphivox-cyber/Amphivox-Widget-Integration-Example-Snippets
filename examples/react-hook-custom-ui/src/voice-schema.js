@@ -1,0 +1,65 @@
+export const schema = {
+  description:
+    "Register for the Fieldnotes gathering in Bengaluru. Help the visitor complete three pages and review their answers.",
+  fields: [
+    {
+      id: "name",
+      label: "Full name",
+      type: "str",
+      maxLength: 150,
+      required: true,
+      page: 0,
+    },
+    {
+      id: "email",
+      label: "Email address",
+      type: "email",
+      required: true,
+      page: 0,
+    },
+    {
+      id: "city",
+      label: "City and country",
+      type: "str",
+      maxLength: 150,
+      required: true,
+      page: 0,
+    },
+    {
+      id: "pass",
+      label: "Your pass",
+      type: "enum",
+      options: ["Gathering pass", "Student pass", "Community pass"],
+      required: true,
+      page: 1,
+    },
+    {
+      id: "seats",
+      label: "Number of seats",
+      type: "int",
+      min: 1,
+      max: 4,
+      required: true,
+      page: 1,
+    },
+    {
+      id: "interest",
+      label: "What are you most excited for?",
+      type: "enum",
+      multi: true,
+      options: [
+        "Good conversations",
+        "Hands-on workshops",
+        "Meeting new people",
+      ],
+      page: 1,
+    },
+    {
+      id: "notes",
+      label: "Dietary needs, access requests, or a note for the hosts",
+      type: "long",
+      maxLength: 1000,
+      page: 2,
+    },
+  ],
+};

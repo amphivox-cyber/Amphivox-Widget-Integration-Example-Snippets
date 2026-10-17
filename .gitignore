@@ -1,0 +1,13 @@
+.claude
+.cloud/
+.codex/
+.vscode/
+.agents/
+*.env
+node_modules/
+dist/
+.vite/
+.env
+.env.local
+.env.*.local
+voice-config.local.js

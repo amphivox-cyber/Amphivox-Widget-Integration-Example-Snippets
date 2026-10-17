@@ -1,0 +1,72 @@
+export const schema = {
+  description:
+    "Share feedback about a visit to Good Measure, a neighborhood kitchen in Bengaluru. Help the visitor complete three pages and review their answers.",
+  fields: [
+    {
+      id: "visitDate",
+      label: "Date of your visit",
+      type: "date",
+      required: true,
+      page: 0,
+    },
+    {
+      id: "occasion",
+      label: "What brought you in?",
+      type: "enum",
+      options: [
+        "A meal with friends",
+        "Family dinner",
+        "A quick coffee",
+        "Something to celebrate",
+        "Just passing by",
+      ],
+      required: true,
+      page: 0,
+    },
+    {
+      id: "rating",
+      label: "How did it feel?",
+      type: "enum",
+      options: ["Not great", "Okay", "Good", "Lovely", "Wonderful"],
+      required: true,
+      page: 0,
+    },
+    {
+      id: "feedback",
+      label: "Your feedback about the visit",
+      type: "long",
+      maxLength: 1000,
+      required: true,
+      page: 1,
+    },
+    {
+      id: "menuIdea",
+      label: "Anything you would love to see on the menu?",
+      type: "str",
+      maxLength: 150,
+      page: 1,
+    },
+    {
+      id: "returnFor",
+      label: "What would you come back for?",
+      type: "enum",
+      multi: true,
+      options: ["The food", "The people", "The atmosphere", "Coffee & pastry"],
+      page: 1,
+    },
+    { id: "email", label: "Email address", type: "email", page: 2 },
+    {
+      id: "extra",
+      label: "Anything else on your mind?",
+      type: "long",
+      maxLength: 1000,
+      page: 2,
+    },
+    {
+      id: "followUp",
+      label: "May our team follow up about your feedback?",
+      type: "bool",
+      page: 2,
+    },
+  ],
+};

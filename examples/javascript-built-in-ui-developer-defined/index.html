@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#edf2ef" />
+    <title>Stillwell — Book a session</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="#"><span>SW</span> STILLWELL</a
+        ><span class="top-note">CARE, AT YOUR PACE</span>
+      </header>
+      <p class="demo-notice">
+        This sample form demonstrates how the AmphiVox Voice Agent integrates with web forms. Visit the <a href="https://amphivox.com/">official AmphiVox website</a>.
+      </p>
+      <section class="booking-layout">
+        <aside class="intro">
+          <p class="eyebrow">A LITTLE SPACE FOR YOU</p>
+          <h1>Let’s find<br />your <em>still point.</em></h1>
+          <p class="lede">
+            Book a session with our friendly team. We’ll take care of the
+            details together.
+          </p>
+          <div class="practice-card">
+            <span class="sun">☼</span>
+            <div>
+              <strong>Here when you need us</strong
+              ><small>Thoughtful care, without the rush.</small>
+            </div>
+          </div>
+          <div class="contact-note">
+            Demo practice only. No appointments or messages are sent.
+          </div>
+        </aside>
+        <section class="booking-card">
+          <div class="card-top">
+            <span id="step-label">01 · YOUR VISIT</span><span>2–3 MINUTES</span>
+          </div>
+          <div class="progress"><span id="progress-fill"></span></div>
+          <form id="multi-form" novalidate>
+            <section class="step" data-step="0">
+              <h2>What brings you in?</h2>
+              <p class="hint">Choose a session and a time that work for you.</p>
+              <label class="field"
+                >Type of appointment<select name="service" required>
+                  <option value="">Select a session</option>
+                  <option>Wellness consultation · 45 min</option>
+                  <option>Massage therapy · 60 min</option>
+                  <option>Nutrition session · 45 min</option>
+                  <option>First visit · 30 min</option>
+                </select></label
+              >
+              <div class="row">
+                <label class="field"
+                  >Preferred date<input
+                    type="date"
+                    name="date"
+                    required /></label
+                ><label class="field"
+                  >Time of day<select name="time" required>
+                    <option value="">Choose a time</option>
+                    <option>Morning · 9–12</option>
+                    <option>Afternoon · 12–4</option>
+                    <option>Evening · 4–7</option>
+                  </select></label
+                >
+              </div>
+              <label class="field"
+                >Is this your first visit?<select name="firstVisit" required>
+                  <option value="">Choose one</option>
+                  <option>Yes, it is</option>
+                  <option>No, I’ve visited before</option>
+                </select></label
+              >
+            </section>
+            <section class="step" data-step="1">
+              <h2>Let us know you.</h2>
+              <p class="hint">
+                We’ll use these details to confirm your booking.
+              </p>
+              <div class="row">
+                <label class="field"
+                  >First name<input
+                    name="firstName"
+                    maxlength="150"
+                    autocomplete="given-name"
+                    placeholder="Alex"
+                    required /></label
+                ><label class="field"
+                  >Last name<input
+                    name="lastName"
+                    maxlength="150"
+                    autocomplete="family-name"
+                    placeholder="Morgan"
+                    required
+                /></label>
+              </div>
+              <label class="field"
+                >Email address<input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="alex@email.com"
+                  required /></label
+              ><label class="field"
+                >Phone number<input
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+1 555 010 2020"
+              /></label>
+            </section>
+            <section class="step" data-step="2">
+              <h2>Anything else?</h2>
+              <p class="hint">
+                Share what would help your visit feel comfortable.
+              </p>
+              <label class="field"
+                >What would you like us to know?<textarea
+                  name="notes"
+                  maxlength="1000"
+                  rows="4"
+                  placeholder="A question, a preference, or a note for your practitioner"
+                ></textarea>
+              </label>
+              <fieldset class="preferences">
+                <legend>Anything we should keep in mind?</legend>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="access"
+                    value="Step-free access"
+                  />
+                  Step-free access</label
+                ><label
+                  ><input
+                    type="checkbox"
+                    name="access"
+                    value="A quieter room"
+                  />
+                  A quieter room</label
+                ><label
+                  ><input
+                    type="checkbox"
+                    name="access"
+                    value="Please explain what to expect"
+                  />
+                  Please explain what to expect</label
+                >
+              </fieldset>
+              <fieldset class="preferences">
+                <legend>May we send appointment reminders?</legend>
+                <label
+                  ><input type="radio" name="reminders" value="yes" />
+                  Yes</label
+                ><label
+                  ><input type="radio" name="reminders" value="no" /> No</label
+                >
+              </fieldset>
+            </section>
+            <div class="form-actions">
+              <button class="back" id="back-button" type="button" hidden>
+                ← Back</button
+              ><button class="next" id="next-button" type="button">
+                Continue <span>→</span></button
+              ><button class="next" id="submit-button" type="submit" hidden>
+                Request appointment <span>↗</span>
+              </button>
+            </div>
+          </form>
+          <p class="voice-disclosure">
+            Use the floating microphone to answer with an AI voice assistant.
+            You can also fill in the form by hand.
+          </p>
+          <p id="voice-notice" class="voice-notice" role="status"></p>
+        </section>
+      </section>
+      <footer>
+        <span>STILLWELL · BENGALURU</span
+        ><span>TAKE A BREATH. WE’LL TAKE IT FROM HERE.</span>
+      </footer>
+    </main>
+    <script src="https://amphivox.com/widget.js" crossorigin></script>
+    <script src="./voice-config.local.js"></script>
+    <script src="./voice-config.js"></script>
+    <script src="./site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101714" />
+    <title>Northstar — Job application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <a class="logo" href="#">N<span>✳</span></a
+        ><span class="team">NORTHSTAR STUDIO <i>·</i> CAREERS</span
+        ><span class="opening">PRODUCT DESIGNER <b>OPEN</b></span>
+      </header>
+      <p class="demo-notice">
+        This sample form demonstrates how the AmphiVox Voice Agent integrates with web forms. Visit the <a href="https://amphivox.com/">official AmphiVox website</a>.
+      </p>
+      <section class="application">
+        <div class="application-head">
+          <div>
+            <p class="eyebrow">COME BUILD WITH US</p>
+            <h1>Make work<br />that <em>matters.</em></h1>
+          </div>
+          <p class="intro">
+            We’re a small team solving thoughtful problems. Tell us a little
+            about what you bring.
+          </p>
+        </div>
+        <div class="form-shell">
+          <aside class="progress-rail">
+            <p>YOUR APPLICATION</p>
+            <ol id="step-list">
+              <li class="current"><span>01</span> About you</li>
+              <li><span>02</span> The role</li>
+              <li><span>03</span> Your story</li>
+            </ol>
+            <div class="rail-caption">
+              TAKES ABOUT<br /><strong>4 MINUTES</strong>
+            </div>
+          </aside>
+          <section class="form-panel">
+            <div class="panel-meta">
+              <span id="step-label">01 / ABOUT YOU</span
+              ><span>✳ &nbsp;No account needed</span>
+            </div>
+            <div class="progress"><span id="progress-fill"></span></div>
+            <form id="your-form" novalidate>
+              <section class="step active" data-step="0">
+                <h2>Let’s meet you.</h2>
+                <p class="hint">Start with the best way to reach you.</p>
+                <div class="row">
+                  <label class="field"
+                    >First name<input
+                      id="applicantFirstName"
+                      name="applicantFirstName"
+                      autocomplete="given-name"
+                      placeholder="Sam"
+                      required /></label
+                  ><label class="field"
+                    >Last name<input
+                      id="last_name"
+                      name="last_name"
+                      autocomplete="family-name"
+                      placeholder="Rivera"
+                      required
+                  /></label>
+                </div>
+                <label class="field"
+                  >Email address<input
+                    id="email_address"
+                    name="email_address"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="sam@email.com"
+                    required /></label
+                ><label class="field"
+                  >Phone number <small>optional</small
+                  ><input
+                    id="phone_number"
+                    name="phone_number"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="+1 555 010 2020"
+                /></label>
+              </section>
+              <section class="step" data-step="1">
+                <h2>Which path feels right?</h2>
+                <p class="hint">A few practical details about the role.</p>
+                <label class="field"
+                  >Position<select id="position" name="position" required>
+                    <option value="">Select a position</option>
+                    <option>Product Designer</option>
+                    <option>Frontend Engineer</option>
+                    <option>Product Manager</option>
+                    <option>Open application</option>
+                  </select></label
+                >
+                <div class="row">
+                  <label class="field"
+                    >Work location<select
+                      id="work_location"
+                      name="work_location"
+                      required
+                    >
+                      <option value="">Choose a location</option>
+                      <option>Remote</option>
+                      <option>New York, NY</option>
+                      <option>London, UK</option>
+                      <option>Bengaluru, India</option>
+                    </select></label
+                  ><label class="field"
+                    >Earliest start date<input
+                      id="earliest_start_date"
+                      name="earliest_start_date"
+                      type="date"
+                      required
+                  /></label>
+                </div>
+                <label class="field"
+                  >Portfolio or LinkedIn link<input
+                    id="portfolio_or_linkedin_link"
+                    name="portfolio_or_linkedin_link"
+                    type="url"
+                    placeholder="https://"
+                    required
+                /></label>
+              </section>
+              <section class="step" data-step="2">
+                <h2>What makes you, you?</h2>
+                <p class="hint">
+                  There’s no perfect answer. A few sentences is plenty.
+                </p>
+                <label class="field"
+                  >Tell us about a project you’re proud of<textarea
+                    id="tell_us_about_a_project_you_re_proud_of"
+                    name="tell_us_about_a_project_you_re_proud_of"
+                    rows="5"
+                    minlength="20"
+                    maxlength="1000"
+                    placeholder="What was the challenge, and what did you make?"
+                    required
+                  ></textarea></label
+                ><label class="field"
+                  >What kind of work gives you energy?<select
+                    id="what_kind_of_work_gives_you_energy"
+                    name="what_kind_of_work_gives_you_energy"
+                    required
+                  >
+                    <option value="">Choose one</option>
+                    <option>Solving a thorny problem</option>
+                    <option>Making something with a team</option>
+                    <option>Learning a new craft</option>
+                    <option>Helping people do their best work</option>
+                  </select></label
+                >
+              </section>
+              <div class="form-actions">
+                <button class="back" id="back-button" type="button" hidden>
+                  ← Back</button
+                ><button class="next" id="next-button" type="button">
+                  Next step <span>→</span></button
+                ><button class="next" id="submit-button" type="submit" hidden>
+                  Send application <span>↗</span>
+                </button>
+              </div>
+            </form>
+            <p class="voice-disclosure">
+              Use the floating microphone to answer with an AI voice assistant.
+              You can also fill in the form by hand.
+            </p>
+            <p id="voice-notice" class="voice-notice" role="status"></p>
+          </section>
+        </div>
+      </section>
+      <footer>
+        <span>WE'RE GLAD YOU'RE HERE.</span><span>NORTHSTAR STUDIO · 2026</span>
+      </footer>
+    </main>
+    <script src="https://amphivox.com/widget.js" crossorigin></script>
+    <script src="./voice-config.local.js"></script>
+    <script src="./voice-config.js"></script>
+    <script src="./site.js"></script>
+  </body>
+</html>
